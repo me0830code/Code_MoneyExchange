@@ -12,11 +12,29 @@ import UIKit
 class MoneyExchangeVC: UIViewController {
     
     
+    @IBOutlet weak var fromCountryTF: UITextField!
+    @IBOutlet weak var toCountryTF: UITextField!
+    @IBOutlet weak var swapCountryBtn: UIButton!
+    
+    @IBOutlet weak var amountTF: UITextField!
+    @IBOutlet weak var goExchangeBtn: UIButton!
+    
+    @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var exchangeRateLabel: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print("Hello")
+
+        SetUpComponents()
     }
+    
+    private func SetUpComponents() {
+    
+    }
+    
     
     
 }
