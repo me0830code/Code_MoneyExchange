@@ -12,6 +12,8 @@
 		102319BD235C29E5002F5FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102319BC235C29E5002F5FF4 /* Assets.xcassets */; };
 		102319C0235C29E5002F5FF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102319BE235C29E5002F5FF4 /* LaunchScreen.storyboard */; };
 		102319CC235C2A48002F5FF4 /* MoneyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CB235C2A48002F5FF4 /* MoneyExchangeVC.swift */; };
+		102319CE235C2E5B002F5FF4 /* ExtensionUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */; };
+		102319D0235C3145002F5FF4 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		102319BF235C29E5002F5FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102319C1235C29E5002F5FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		102319CB235C2A48002F5FF4 /* MoneyExchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyExchangeVC.swift; sourceTree = "<group>"; };
+		102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIKit.swift; sourceTree = "<group>"; };
+		102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,10 +59,10 @@
 			isa = PBXGroup;
 			children = (
 				102319B5235C29E4002F5FF4 /* AppDelegate.swift */,
-				102319CA235C2A0A002F5FF4 /* Controller */,
-				102319C9235C2A05002F5FF4 /* View */,
-				102319C8235C2A00002F5FF4 /* Model */,
 				102319C7235C29FA002F5FF4 /* Support */,
+				102319C8235C2A00002F5FF4 /* Model */,
+				102319C9235C2A05002F5FF4 /* View */,
+				102319CA235C2A0A002F5FF4 /* Controller */,
 				102319BC235C29E5002F5FF4 /* Assets.xcassets */,
 				102319C1235C29E5002F5FF4 /* Info.plist */,
 			);
@@ -68,6 +72,7 @@
 		102319C7235C29FA002F5FF4 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -75,6 +80,7 @@
 		102319C8235C2A00002F5FF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,7 +173,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102319CE235C2E5B002F5FF4 /* ExtensionUIKit.swift in Sources */,
 				102319CC235C2A48002F5FF4 /* MoneyExchangeVC.swift in Sources */,
+				102319D0235C3145002F5FF4 /* ExchangeRateManager.swift in Sources */,
 				102319B6235C29E4002F5FF4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
