@@ -73,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */,
+				102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -80,7 +81,6 @@
 		102319C8235C2A00002F5FF4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

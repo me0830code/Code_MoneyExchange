@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum ErrorType: Error {
-    case FailURL
-    case FailJsonDecode
-}
-
 class ExchangeRateManager {
     
     // Add USD first because all exchange rates are based on USD
@@ -39,6 +34,8 @@ class ExchangeRateManager {
         guard let requestURL = URL(string: "https://tw.rter.info/capi.php") else {
             
             // Fail to request URL
+            print("Error Request URL")
+            
             return completion([], [:])
         }
         
@@ -49,6 +46,8 @@ class ExchangeRateManager {
                 guard let jsonObject = try? JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary else {
                     
                     // Fail to decode jsonObject
+                    print("Error Decode JsonObject")
+                    
                     return completion([], [:])
                 }
                 
