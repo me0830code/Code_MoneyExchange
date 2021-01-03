@@ -11,9 +11,9 @@
 		102319BB235C29E4002F5FF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102319B9235C29E4002F5FF4 /* Main.storyboard */; };
 		102319BD235C29E5002F5FF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 102319BC235C29E5002F5FF4 /* Assets.xcassets */; };
 		102319C0235C29E5002F5FF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 102319BE235C29E5002F5FF4 /* LaunchScreen.storyboard */; };
-		102319CC235C2A48002F5FF4 /* MoneyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CB235C2A48002F5FF4 /* MoneyExchangeVC.swift */; };
-		102319CE235C2E5B002F5FF4 /* ExtensionUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */; };
-		102319D0235C3145002F5FF4 /* ExchangeRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */; };
+		10CC7BD425A2398B00DF341C /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC7BD325A2398B00DF341C /* Extension.swift */; };
+		10CC7BDB25A23A3100DF341C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC7BDA25A23A3100DF341C /* MainViewController.swift */; };
+		10CC7BDF25A23AFA00DF341C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CC7BDE25A23AFA00DF341C /* MainViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,9 +23,9 @@
 		102319BC235C29E5002F5FF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		102319BF235C29E5002F5FF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		102319C1235C29E5002F5FF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		102319CB235C2A48002F5FF4 /* MoneyExchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneyExchangeVC.swift; sourceTree = "<group>"; };
-		102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIKit.swift; sourceTree = "<group>"; };
-		102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRateManager.swift; sourceTree = "<group>"; };
+		10CC7BD325A2398B00DF341C /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		10CC7BDA25A23A3100DF341C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		10CC7BDE25A23AFA00DF341C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,47 +59,47 @@
 			isa = PBXGroup;
 			children = (
 				102319B5235C29E4002F5FF4 /* AppDelegate.swift */,
-				102319C7235C29FA002F5FF4 /* Support */,
-				102319C8235C2A00002F5FF4 /* Model */,
-				102319C9235C2A05002F5FF4 /* View */,
-				102319CA235C2A0A002F5FF4 /* Controller */,
+				10CC7BE825A23BE900DF341C /* Support */,
+				10CC7BE425A23B8900DF341C /* Model */,
+				10CC7BE525A23B8D00DF341C /* View */,
+				10CC7BE725A23BE300DF341C /* ViewModel */,
 				102319BC235C29E5002F5FF4 /* Assets.xcassets */,
 				102319C1235C29E5002F5FF4 /* Info.plist */,
 			);
 			path = MoneyExchange;
 			sourceTree = "<group>";
 		};
-		102319C7235C29FA002F5FF4 /* Support */ = {
-			isa = PBXGroup;
-			children = (
-				102319CD235C2E5B002F5FF4 /* ExtensionUIKit.swift */,
-				102319CF235C3145002F5FF4 /* ExchangeRateManager.swift */,
-			);
-			path = Support;
-			sourceTree = "<group>";
-		};
-		102319C8235C2A00002F5FF4 /* Model */ = {
+		10CC7BE425A23B8900DF341C /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		102319C9235C2A05002F5FF4 /* View */ = {
+		10CC7BE525A23B8D00DF341C /* View */ = {
 			isa = PBXGroup;
 			children = (
 				102319BE235C29E5002F5FF4 /* LaunchScreen.storyboard */,
 				102319B9235C29E4002F5FF4 /* Main.storyboard */,
+				10CC7BDA25A23A3100DF341C /* MainViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		102319CA235C2A0A002F5FF4 /* Controller */ = {
+		10CC7BE725A23BE300DF341C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				102319CB235C2A48002F5FF4 /* MoneyExchangeVC.swift */,
+				10CC7BDE25A23AFA00DF341C /* MainViewModel.swift */,
 			);
-			path = Controller;
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		10CC7BE825A23BE900DF341C /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				10CC7BD325A2398B00DF341C /* Extension.swift */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,10 +173,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				102319CE235C2E5B002F5FF4 /* ExtensionUIKit.swift in Sources */,
-				102319CC235C2A48002F5FF4 /* MoneyExchangeVC.swift in Sources */,
-				102319D0235C3145002F5FF4 /* ExchangeRateManager.swift in Sources */,
+				10CC7BD425A2398B00DF341C /* Extension.swift in Sources */,
 				102319B6235C29E4002F5FF4 /* AppDelegate.swift in Sources */,
+				10CC7BDB25A23A3100DF341C /* MainViewController.swift in Sources */,
+				10CC7BDF25A23AFA00DF341C /* MainViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
