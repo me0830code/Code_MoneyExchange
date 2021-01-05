@@ -10,7 +10,7 @@ Side Project for MVVM Design Pattern
 # Demo
 Exchange Money
 
-![](https://i.imgur.com/Dt1Blfz.gif)
+![](https://i.imgur.com/qse7uKW.gif)
 
 # API Request
 [Real-Time Money Exchange Rate](https://tw.rter.info/capi.php)
