@@ -17,7 +17,7 @@ class MainViewController: UIViewController {
             fromCountryTF.delegate = self
             fromCountryTF.inputView = countryPickerView
             fromCountryTF.inputAccessoryView = toolBar
-            fromCountryTF.roundedCorner(by: 5)
+            fromCountryTF.roundedCorner(by: 5, borderWidth: 2, borderColor: .clear)
         }
     }
     
@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
             toCountryTF.delegate = self
             toCountryTF.inputView = countryPickerView
             toCountryTF.inputAccessoryView = toolBar
-            toCountryTF.roundedCorner(by: 5)
+            toCountryTF.roundedCorner(by: 5, borderWidth: 2, borderColor: .clear)
         }
     }
     
@@ -47,7 +47,7 @@ class MainViewController: UIViewController {
             amountTF.delegate = self
             amountTF.keyboardType = .decimalPad
             amountTF.clearButtonMode = .whileEditing
-            amountTF.roundedCorner(by: 5)
+            amountTF.roundedCorner(by: 5, borderWidth: 2, borderColor: .clear)
         }
     }
     
@@ -93,9 +93,13 @@ class MainViewController: UIViewController {
         thisToolBar.barStyle = .default
         thisToolBar.sizeToFit()
 
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(SelectCountry))
+        
+        let spaceSButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
         let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(CloseEditing))
 
-        thisToolBar.setItems([cancelButton], animated: false)
+        thisToolBar.setItems([cancelButton, spaceSButton, doneButton], animated: false)
         thisToolBar.isUserInteractionEnabled = true
         
         return thisToolBar
@@ -168,6 +172,14 @@ class MainViewController: UIViewController {
         toCountryTF.text = tempCountryName
     }
     
+    @objc private func SelectCountry() {
+    
+        if fromCountryTF.isEditing { fromCountryTF.text = countryList[countryPickerView.selectedRow(inComponent: 0)] }
+        else if toCountryTF.isEditing { toCountryTF.text = countryList[countryPickerView.selectedRow(inComponent: 0)] }
+        
+        CloseEditing()
+    }
+    
     @objc private func CloseEditing() {
         fromCountryTF.resignFirstResponder()
         toCountryTF.resignFirstResponder()
@@ -186,7 +198,33 @@ extension MainViewController: UITextFieldDelegate {
             default : return false
         }
     }
-
+    
+    // Showing Dynamic Picker View Start Index
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        
+        guard textField == fromCountryTF || textField == toCountryTF else { return }
+        
+        var selectedCountry: String?
+        switch textField {
+            case fromCountryTF: selectedCountry = fromCountryTF.text
+            case toCountryTF: selectedCountry = toCountryTF.text
+            default: break
+        }
+        
+        guard let thisSelectedCountry = selectedCountry else { return }
+        
+        // Showing Dynamic Picker View Start Index When Only Country is Not Empty
+        guard thisSelectedCountry.count > 0 else {
+           
+            // Otherwise, Showing TWD as The First Index
+            countryPickerView.selectRow(countryList.firstIndex(of: "TWD") ?? 0, inComponent: 0, animated: true)
+            return
+        }
+        
+        guard let thisSelectedCountryIndex = countryList.firstIndex(of: thisSelectedCountry) else { return }
+        countryPickerView.selectRow(thisSelectedCountryIndex, inComponent: 0, animated: true)
+    }
+    
     // Only Amount TextField Can Handle Text
     // fromCountryTF & toCountryTF -> Text Only from PickerView
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -214,7 +252,7 @@ extension MainViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     
     func  pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
-        if fromCountryTF.isEditing { fromCountryTF.text = countryList[row] ; fromCountryTF.resignFirstResponder() }
-        else if self.toCountryTF.isEditing { toCountryTF.text = countryList[row] ; toCountryTF.resignFirstResponder() }
+        if fromCountryTF.isEditing { fromCountryTF.text = countryList[row] }
+        else if self.toCountryTF.isEditing { toCountryTF.text = countryList[row] }
     }
 }

@@ -59,8 +59,8 @@
 			isa = PBXGroup;
 			children = (
 				102319B5235C29E4002F5FF4 /* AppDelegate.swift */,
+				1088A39425A495B5000A7E46 /* Model */,
 				10CC7BE825A23BE900DF341C /* Support */,
-				10CC7BE425A23B8900DF341C /* Model */,
 				10CC7BE525A23B8D00DF341C /* View */,
 				10CC7BE725A23BE300DF341C /* ViewModel */,
 				102319BC235C29E5002F5FF4 /* Assets.xcassets */,
@@ -69,7 +69,7 @@
 			path = MoneyExchange;
 			sourceTree = "<group>";
 		};
-		10CC7BE425A23B8900DF341C /* Model */ = {
+		1088A39425A495B5000A7E46 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
