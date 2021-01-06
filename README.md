@@ -2,7 +2,7 @@
 Date : 108 / 10 / 20
 
 # Motivation & Purpose
-Side Project for MVVM Design Pattern
+Side Project - MVVM Design Pattern
 
 1. Money Exchange System
 2. MVVM Design Pattern
