@@ -1,5 +1,5 @@
 # MoneyExchange
-Date : 108 / 10 / 20
+Date : 2019 / 10 / 20
 
 # Motivation & Purpose
 Side Project - MVVM Design Pattern
